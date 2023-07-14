@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============= Fonts ============= */
+@font-face {
+  font-family: Cyber;
+  src: url("/fonts/cyber.ttf");
+  font-display: swap;
+}
+
+
+/* ============= Styling ============= */
+body {
+  @apply bg-darker text-white font-cyber
+}
+
+p, h1 {
+  @apply break-words;
+}
+
+::-moz-selection { /* Code for Firefox */
+  @apply bg-green-600 text-white
+}
+
+::selection {
+  @apply bg-green-600 text-white
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-darker;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-green-600;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-green-700;
+}
+
+
+
+.nav-link {
+  @apply flex items-center md:justify-center font-cyber text-xl px-4 py-2 mt-2 text-gray-900 dark:hover:bg-green-700 dark:focus:bg-green-700 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none;
+}
+
+.auth-btn {
+  @apply flex items-center justify-center font-cyber text-xl px-4 py-2 mt-2 text-gray-900 dark:hover:bg-dark dark:focus:bg-dark dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none;
+}
+
+.dropdown-link {
+  @apply block px-4 py-2 mt-2 font-cyber bg-transparent  dark:bg-transparent dark:hover:bg-green-700 dark:focus:bg-green-700 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none;
+}
