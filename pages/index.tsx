@@ -25,7 +25,7 @@ export default function Home() {
                   <div className="max-w-3xl mx-auto text-center">
                       <h1 className="mb-4 text-3xl text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
                           WELCOME TO{" "}
-                          <span className="bg-green-600 text-green-900 px-3">LYNIX.CA</span>
+                          <span className="text-green-600 px-3">LYNIX.CA</span>
                       </h1>
                       <p className="text-2xl text-gray-500 dark:text-white">
                           Nice to meet you! Take a look at my pages to learn more about my
