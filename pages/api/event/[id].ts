@@ -9,7 +9,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             if (id) {
                 const event = await prisma.event.findUnique({
                     where: {
-                        id: id
+                        id: id as string
                     }
                 })
 
