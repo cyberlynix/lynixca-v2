@@ -12,6 +12,7 @@ export default function Navbar() {
     const session = null;
 
     return (
+        <>
         <div className="w-full text-gray-700 bg-white dark:text-gray-200 dark:bg-dark md:h-20 min-h-20 items-center">
             <div className="flex flex-col max-w-screen-xl h-full px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
                 <div className="p-4 flex flex-row items-center justify-between">
@@ -99,5 +100,8 @@ export default function Navbar() {
                 </nav>
             </div>
         </div>
+        <div className="p-3 bg-red-700 font-bold animate-pulse">
+            <p>Network Alert: Lynix is looking for work and possibly moving to Edmonton, AB. Some services may not function correctly during the month of August. <Link href="/career-change" className="underline">Learn More</Link></p>
+        </div></>
     );
 }
