@@ -9,3 +9,76 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+// User
+model User {
+  id          String   @id @default(uuid())
+  username    String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  deletedAt   DateTime?
+  events      Event[]
+  articles    Article[]
+  notes       Note[]
+  comments    Comment[]
+}
+
+// Blog
+model Article {
+  id          String   @id @default(uuid())
+  title       String
+  content     String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  deletedAt   DateTime?
+  comments    Comment[]
+  author      User     @relation(fields: [authorId], references: [id])
+  authorId    String
+}
+
+model Comment {
+  id          String   @id @default(uuid())
+  content     String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  deletedAt   DateTime?
+  article     Article  @relation(fields: [articleId], references: [id])
+  articleId   String
+  author      User     @relation(fields: [authorId], references: [id])
+  authorId    String
+}
+
+// Notes
+model Note {
+  id          String   @id @default(uuid())
+  title       String
+  content     String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  deletedAt   DateTime?
+  owner       User     @relation(fields: [ownerId], references: [id])
+  ownerId     String
+}
+
+// Events
+model Event {
+  id          String   @id @default(uuid())
+  title       String
+  description String?
+  content     String?
+  location    String?
+  startTime   DateTime
+  endTime     DateTime
+  status      EventStatus
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  attendees   User[]
+}
+
+enum EventStatus {
+  CANCELLED
+  DELAYED
+  PLANNED
+  ONGOING
+  FINISHED
+}
