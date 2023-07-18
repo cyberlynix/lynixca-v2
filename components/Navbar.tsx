@@ -1,11 +1,15 @@
 import {useState} from "react";
 import Link from "next/link";
 import CyberImage from "@/components/CyberImage";
+import Modal from "@/components/Modal";
 
 export default function Navbar() {
 
     const [collapsed, setCollapsed] = useState(false);
     const [authDropdown, setAuthDropdown] = useState(false);
+    const [showModal, setShowModal] = useState(false);
+
+    const session = null;
 
     return (
         <div className="w-full text-gray-700 bg-white dark:text-gray-200 dark:bg-dark md:h-20 min-h-20 items-center">
@@ -46,7 +50,7 @@ export default function Navbar() {
                         Contact
                     </Link>
                     {/* Check if the user is authenticated */}
-                    <div className="relative hidden">
+                    {session ? <div className="relative">
                         <button onClick={() => setAuthDropdown(!authDropdown)} className="auth-btn h-full flex items-center">
                             <CyberImage
                                 src="/logo.png"
@@ -71,7 +75,6 @@ export default function Navbar() {
                                 />
                             </svg>
                         </button>
-                        {authDropdown &&
                             <div className="absolute right-0 w-full mt-0 origin-top-right shadow-lg md:w-48 z-30">
                                 <div className="bg-white shadow dark:bg-dark">
                                     <Link className="dropdown-link" href="#">
@@ -85,8 +88,14 @@ export default function Navbar() {
                                     </Link>
                                 </div>
                             </div>
-                        }
-                    </div>
+                    </div> :
+                        <div className="py-4">
+                            <button onClick={() => setShowModal(true)} className="auth-btn-2 h-full flex items-center bg-green-600 font-semibold ml-5">
+                                <span>Login</span>
+                            </button>
+                            {showModal && <Modal callback={setShowModal}/> }
+                        </div>
+                    }
                 </nav>
             </div>
         </div>
