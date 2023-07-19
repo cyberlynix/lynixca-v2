@@ -26,7 +26,7 @@ export default function Home() {
                   <div className="max-w-3xl mx-auto text-center">
                       <h1 className="mb-4 text-3xl text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
                           WELCOME TO{" "}
-                          <span className="text-green-600 px-3">LYNIX.CA</span>
+                          <span className="text-cyan-700 px-3">LYNIX<span className="text-green-600">.CA</span></span>
                       </h1>
                       <p className="text-2xl text-gray-500 dark:text-white">
                           Nice to meet you! Take a look at my pages to learn more about my
@@ -43,8 +43,8 @@ export default function Home() {
               <section className="p-6 md:w-1/2 w-full">
                   <CyberImage
                       alt="Lynix"
-                      src="/logo.png"
-                      containerClassName="h-20 w-20 float-right rotate-6 mr-5 ml-5 mb-5 " imageClassName="rounded-2xl"
+                      src="/imgs/Lynix_Mulli.png"
+                      containerClassName="h-32 w-32 float-right rotate-6 mr-5 ml-5 mb-5 border-2 border-gray-700 rounded-2xl float-animation" imageClassName="rounded-2xl"
                   />
                   <h1 className="text-6xl font-cyber">
                       👋 Hello <span className="text-green-700">There</span>!
@@ -66,7 +66,7 @@ export default function Home() {
                       imageClassName="rounded-2xl"
                   />
                   <h1 className="text-6xl font-cyber">
-                      <span className="text-green-700">About</span> Me
+                      <span className="text-cyan-700">About</span> Me
                   </h1>
                   <p className="text-gray-300 text-lg font-cyber mt-3">
                       I began my journey in IT back in 2013, where I started by learning basic

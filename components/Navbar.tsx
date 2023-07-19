@@ -91,7 +91,7 @@ export default function Navbar() {
                             </div>
                     </div> :
                         <div className="py-4">
-                            <button onClick={() => setShowModal(true)} className="auth-btn-2 h-full flex items-center bg-green-600 font-semibold ml-5">
+                            <button onClick={() => setShowModal(true)} className="auth-btn-2 h-full flex items-center bg-cyan-600 font-semibold ml-5">
                                 <span>Login</span>
                             </button>
                             {showModal && <Modal callback={setShowModal}/> }
@@ -99,9 +99,6 @@ export default function Navbar() {
                     }
                 </nav>
             </div>
-        </div>
-        <div className="p-3 bg-red-700 font-bold animate-pulse">
-            <p>Network Alert: Lynix is looking for work and possibly moving to Edmonton, AB. Some services may not function correctly during the month of August. <Link href="/career-change" className="underline">Learn More</Link></p>
         </div></>
     );
 }

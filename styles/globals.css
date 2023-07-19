@@ -27,6 +27,31 @@ p, h1 {
   @apply bg-green-600 text-white
 }
 
+@keyframes float {
+  0%, 100% {
+    transform: translateY(-5px) rotate(6deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(6deg);
+  }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float-rev {
+  0%, 100% {
+    transform: translateY(0px) rotate(-6deg);
+  }
+  50% {
+    transform: translateY(-7px) rotate(-6deg);
+  }
+}
+
+.float-animation-rev {
+  animation: float-rev 4.5s ease-in-out infinite;
+}
 /* width */
 ::-webkit-scrollbar {
   width: 10px;

@@ -17,15 +17,15 @@ export default function Fursona() {
             </Head>
             <WebLayout>
                 <div className="min-h-screen px-10 py-10 font-cyber">
-                    <h1 className="text-6xl">My Fursona</h1>
+                    <h1 className="text-6xl ">My Fursona</h1>
                     <p className="mt-3">
-                        <span className="text-green-700 text-xl">What's a fursona?</span> A fursona
+                        <span className="text-cyan-600 text-xl">What's a fursona?</span> A fursona
                         is a customized animal character representing someone in the furry fandom,
                         ranging from anthropomorphic personas to roleplay characters or digital
                         mascots.
                     </p>
                     <p>
-                        <span className="text-green-700 text-xl">What's a furry?</span> A furry is
+                        <span className="text-cyan-600 text-xl">What's a furry?</span> A furry is
                         someone who is a fan or enthusiast of characters that depict animals with
                         human characteristics, such as talking, walking on two legs, and displaying
                         human-like emotions and behaviors.
@@ -51,11 +51,59 @@ export default function Fursona() {
                             Error Code: LYNIX_NOT_CONNECTED
                         </p>
                     </div>
+                    <h1 className="text-6xl mt-5">Color References </h1>
+                    <p className="mt-3">
+                        These colors serve as guiding elements for artists and brand designers, ensuring the most optimal design alignment for Lynix while maintaining a consistent and cohesive visual identity. <br/><br/> 
+                        General Colors : 
+                    </p>
+                    <div className="flex space-x-4 mt-3">
+                        <div className="h-10 w-10 bg-cyan-500  border-2 border-gray-700">
+
+                        </div>
+                        <div className="h-10 w-10 bg-green-500  border-2 border-gray-700">
+
+                        </div>
+                        <div className="h-10 w-10 bg-white  border-2 border-gray-700">
+
+                        </div>
+                        <div className="h-10 w-10 bg-darker border-2 border-gray-700">
+
+                        </div>
+                    </div>
+                    <p className="mt-3">
+                        Eye Color: 
+                    </p>
+                    <div className="flex space-x-4 mt-3">
+                        <div className="h-10 w-10 bg-cyan-500  border-2 border-gray-700">
+
+                        </div>
+                        <div className="h-10 w-10 bg-green-500  border-2 border-gray-700">
+
+                        </div>
+                    </div>
+                    <p className="mt-3">
+                        Website Branding Colors: 
+                    </p>
+                    <div className="flex space-x-4 mt-3">
+                        <div className="h-10 w-10 bg-dark  border-2 border-gray-700">
+
+                        </div>
+                        <div className="h-10 w-10 bg-darker  border-2 border-gray-700">
+
+                        </div>
+                        <div className="h-10 w-10 bg-green-600  border-2 border-gray-700">
+
+                        </div>
+                        <div className="h-10 w-10 bg-cyan-700  border-2 border-gray-700">
+
+                        </div>
+                    </div>
                     <h1 className="text-6xl mt-5">Artwork </h1>
                     <div className="flex space-x-4 mt-3">
-                        <CyberImage src="/logo.png" alt="Lynix" containerClassName="h-[300px] w-[200px]" imageClassName="rounded-2xl" />
-                        <CyberImage src="/imgs/lynix.png" alt="Lynix" containerClassName="h-[300px] w-[200px]" imageClassName="rounded-2xl" />
-                        <CyberImage src="/imgs/LynixDoodle.png" alt="Lynix" containerClassName="h-[300px] w-[200px]" imageClassName="rounded-2xl" />
+                        <CyberImage src="/imgs/lynixrender-fixed.png" alt="Lynix" containerClassName="h-[300px] w-[150px]" imageClassName="rounded-2xl" />
+                        <CyberImage src="/imgs/logo-fixed.png" alt="Lynix" containerClassName="h-[300px] w-[300px]" imageClassName="rounded-2xl" />
+                        <CyberImage src="/imgs/LynixDoodle.png" alt="Lynix" containerClassName="h-[300px] w-[300px]" imageClassName="rounded-2xl" />
+                        <CyberImage src="/imgs/Lynix_Mulli.png" alt="Lynix" containerClassName="h-[300px] w-[300px]" imageClassName="rounded-2xl" />
                     </div>
                     <h1 className="text-6xl mt-5">Stickers </h1>
                     <p className="text-red-600 mt-3">[404] No Stickers Found!</p>
